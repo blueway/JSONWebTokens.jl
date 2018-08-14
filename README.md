@@ -20,7 +20,7 @@ jwt = JSONWebTokens.encode(encoding, claims_dict)
 ```
 
 ```
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiBEb2UiLCJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.TjUTSL0RQayQG-y_h2Tl3FmAgxhC0fYtmeiU7jnMdXY"
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjIsIm5hbWUiOiJKb2huIERvZSIsInN1YiI6IjEyMzQ1Njc4OTAifQ.bKB04O+OWqZhSxdzOhf2RdM/5nb+fWZgpkKpzoa35ks"
 ```
 
 Decode:
