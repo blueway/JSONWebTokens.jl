@@ -1,6 +1,6 @@
 name = "JSONWebTokens"
 uuid = "0327ffc2-9f9d-11e8-02a7-f70af7424b07"
-authors = ["tomaswyz <jackywyz@126.com>"]
+authors = ["tomaswyz"]
 version = "0.1.0"
 
 [deps]
