@@ -1,16 +1,7 @@
 
-base64url_encode(s) = replace(Base64.base64encode(s), "=" => "") # removes trailing padding
+base64url_encode(s) = Base64.base64encode(s)
 
 function base64url_decode(s::AbstractString)
-    @assert isascii(s)
-    # adds padding back
-    r = rem(length(s), 4)
-    if r > 0
-        for i in 1:r
-            s *= "="
-        end
-    end
-
     return Base64.base64decode(s)
 end
 

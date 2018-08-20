@@ -1,3 +1,4 @@
+import Random.MersenneTwister
 
 struct RS{bits} <: Encoding
     key::MbedTLS.PKContext
@@ -23,11 +24,11 @@ function RS{bits}(key_filepath::AbstractString) where {bits}
 
     if startswith(key_as_string, "-----BEGIN PUBLIC KEY-----")
         # public key
-        MbedTLS.parse_public_key!(context, key_as_bytes)
+        MbedTLS.parse_public_key!(context, key_as_string)
         return RS{bits}(context, false)
     elseif startswith(key_as_string, "-----BEGIN RSA PRIVATE KEY-----")
         # private key
-        MbedTLS.parse_key!(context, key_as_bytes)
+        MbedTLS.parse_key!(context, key_as_string)
         return RS{bits}(context, true)
     else
         error("$key_filepath is not a valid RSA public or private key.")
